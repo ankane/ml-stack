@@ -63,10 +63,6 @@ Designed for deep learning with Torch
 - [Torch.rb](https://github.com/ankane/torch.rb)
 - [TorchVision](https://github.com/ankane/torchvision)
 
-## History
-
-View the [changelog](https://github.com/ankane/ml-stack/blob/master/CHANGELOG.md)
-
 ## Contributing
 
 Everyone is encouraged to help improve this project. Here are a few ways you can help:
