@@ -1,0 +1,5 @@
+dist: bionic
+services:
+  - docker
+script:
+  - docker build -f standard/Dockerfile -t ankane/ml-stack:standard .
