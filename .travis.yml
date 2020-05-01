@@ -1,8 +1,12 @@
 dist: bionic
 services:
   - docker
-script:
-  - docker build -f standard/Dockerfile -t ankane/ml-stack:standard .
+jobs:
+  include:
+    - name: Standard
+      script: docker build -f standard/Dockerfile -t ankane/ml-stack:standard .
+    - name: Torch GPU
+      script: docker build -f torch-gpu/Dockerfile -t ankane/ml-stack:torch-gpu .
 notifications:
   email:
     on_success: never
