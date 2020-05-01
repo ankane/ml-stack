@@ -33,7 +33,13 @@ For GPU images, install the NVIDIA driver and [container toolkit](https://github
 
 ### Paperspace
 
-Use a [custom container](https://docs.paperspace.com/gradient/notebooks/notebook-containers) for your notebook. Set the container name to the image you want to use (like `ankane/ml-stack:torch-gpu`) and leave the other fields in that section blank.
+Use a [custom container](https://docs.paperspace.com/gradient/notebooks/notebook-containers) for your notebook. Set the container name to the image you want to use, like:
+
+```text
+ankane/ml-stack:torch-gpu
+```
+
+And leave the other fields in that section blank.
 
 ## Images
 
