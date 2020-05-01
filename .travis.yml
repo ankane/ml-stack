@@ -3,3 +3,7 @@ services:
   - docker
 script:
   - docker build -f standard/Dockerfile -t ankane/ml-stack:standard .
+notifications:
+  email:
+    on_success: never
+    on_failure: change
