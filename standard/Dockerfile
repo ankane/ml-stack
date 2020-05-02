@@ -49,8 +49,10 @@ RUN pip3 install jupyter matplotlib && \
 # install gems
 RUN gem install \
         daru \
+        fasttext \
         ffi-rzmq \
         iruby \
+        libmf \
         lightgbm \
         matplotlib \
         numo-narray \
@@ -58,6 +60,7 @@ RUN gem install \
         prophet-rb \
         rumale \
         xgb \
+        xlearn \
         && \
     iruby register
 

@@ -53,12 +53,15 @@ There are a few images to choose from:
 Tag: `standard`
 
 - [Daru](https://github.com/SciRuby/daru)
+- [fastText](https://github.com/ankane/fastText)
+- [LIBMF](https://github.com/ankane/libmf)
 - [LightGBM](https://github.com/ankane/lightgbm)
 - [Numo](https://github.com/ruby-numo/numo-narray)
 - [Nyaplot](https://github.com/domitry/nyaplot)
 - [Prophet](https://github.com/ankane/prophet)
 - [Rumale](https://github.com/yoshoku/rumale)
 - [XGBoost](https://github.com/ankane/xgb)
+- [xLearn](https://github.com/ankane/xlearn)
 
 ### Torch GPU
 
