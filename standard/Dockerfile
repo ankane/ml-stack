@@ -49,7 +49,6 @@ RUN pip3 install jupyter matplotlib && \
 # install gems
 RUN gem install \
         daru \
-        fasttext \
         ffi-rzmq \
         iruby \
         libmf \
@@ -62,6 +61,7 @@ RUN gem install \
         xgb \
         xlearn \
         && \
+    gem install fasttext -- --with-optflags="-march=x86-64" && \
     iruby register
 
 WORKDIR /notebooks
