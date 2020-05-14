@@ -57,6 +57,7 @@ RUN gem install \
         numo-narray \
         nyaplot \
         prophet-rb \
+        rover-df \
         rumale \
         xgb \
         xlearn \
