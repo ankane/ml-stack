@@ -1,8 +1,5 @@
 FROM ubuntu:18.04
 
-ARG NB_USER="jovyan"
-ARG NB_UID="1000"
-
 ENV RUBY_VERSION 2.7.1
 
 # install packages
@@ -45,7 +42,9 @@ RUN cd /tmp && \
 
 # install Jupyter
 RUN pip3 install jupyter matplotlib && \
-    jupyter kernelspec remove -f python3
+    jupyter kernelspec remove -f python3 && \
+    mkdir /root/.jupyter && \
+    echo 'c.KernelSpecManager.ensure_native_kernel = False' > ~/.jupyter/jupyter_notebook_config.py
 
 # install gems
 RUN gem install \
@@ -63,18 +62,11 @@ RUN gem install \
         xgb \
         xlearn \
         && \
-    gem install fasttext -- --with-optflags="-march=x86-64"
-
-RUN adduser --disabled-password --gecos '' --uid ${NB_UID} ${NB_USER}
-
-USER ${NB_UID}
-
-RUN mkdir ~/.jupyter && \
-    echo 'c.KernelSpecManager.ensure_native_kernel = False' > ~/.jupyter/jupyter_notebook_config.py && \
+    gem install fasttext -- --with-optflags="-march=x86-64" && \
     iruby register
 
 WORKDIR /notebooks
 
 COPY standard/Forecasting.ipynb ./
 
-CMD ["jupyter", "notebook", "--no-browser", "--ip=0.0.0.0"]
+CMD ["jupyter", "notebook", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
