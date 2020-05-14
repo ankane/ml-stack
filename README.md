@@ -49,23 +49,21 @@ And leave the other fields in that section blank.
 Create a `Dockerfile` in the root of your repository with the image you want to use and your notebooks:
 
 ```Dockerfile
-# 1. Choose an image
+# Choose an image
 FROM ankane/ml-stack:standard
 
-ARG NB_USER
-ARG NB_UID
-
-RUN adduser --disabled-password --gecos '' --uid ${NB_UID} ${NB_USER}
-
+# Remove example notebooks
 RUN rm *.ipynb
 
-# 2. Copy your notebooks
+# Copy your notebooks
 COPY Notebook1.ipynb Notebook2.ipynb ./
 
-RUN chown -R ${NB_USER}:${NB_USER} .
-
+# The rest is specific to Binder
+ARG NB_USER
+ARG NB_UID
+RUN adduser --disabled-password --gecos '' --uid ${NB_UID} ${NB_USER} && \
+    chown -R ${NB_USER}:${NB_USER} .
 USER ${NB_USER}
-
 RUN mkdir ~/.jupyter && \
     echo 'c.KernelSpecManager.ensure_native_kernel = False' > ~/.jupyter/jupyter_notebook_config.py && \
     iruby register
@@ -93,7 +91,7 @@ Tag: `standard`
 - [Prophet](https://github.com/ankane/prophet)
 - [Rover](https://github.com/ankane/rover)
 - [Rumale](https://github.com/yoshoku/rumale)
-- [XGBoost](https://github.com/ankane/xgb)
+- [XGBoost](https://github.com/ankane/xgboost)
 - [xLearn](https://github.com/ankane/xlearn)
 
 ### Torch GPU
