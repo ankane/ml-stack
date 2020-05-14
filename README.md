@@ -4,10 +4,13 @@
 
 Spin up a machine learning environment in a single command
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ankane/ml-stack/master)
+
 ## Getting Started
 
 - [Docker](#docker)
 - [Paperspace](#paperspace)
+- [Binder](#binder)
 
 ### Docker
 
@@ -40,6 +43,35 @@ ankane/ml-stack:torch-gpu
 ```
 
 And leave the other fields in that section blank.
+
+### Binder
+
+Create a `Dockerfile` in the root of your repository with the image you want to use and your notebooks:
+
+```Dockerfile
+# 1. Choose an image
+FROM ankane/ml-stack:standard
+
+ARG NB_USER
+ARG NB_UID
+
+RUN adduser --disabled-password --gecos '' --uid ${NB_UID} ${NB_USER}
+
+RUN rm *.ipynb
+
+# 2. Copy your notebooks
+COPY Notebook1.ipynb Notebook2.ipynb ./
+
+RUN chown -R ${NB_USER}:${NB_USER} .
+
+USER ${NB_USER}
+
+RUN mkdir ~/.jupyter && \
+    echo 'c.KernelSpecManager.ensure_native_kernel = False' > ~/.jupyter/jupyter_notebook_config.py && \
+    iruby register
+```
+
+Then visit [Binder](https://mybinder.org) to run it.
 
 ## Images
 
