@@ -91,6 +91,7 @@ Tag: `standard`
 - [Numo](https://github.com/ruby-numo/numo-narray)
 - [Nyaplot](https://github.com/domitry/nyaplot)
 - [Prophet](https://github.com/ankane/prophet)
+- [Rover](https://github.com/ankane/rover)
 - [Rumale](https://github.com/yoshoku/rumale)
 - [XGBoost](https://github.com/ankane/xgb)
 - [xLearn](https://github.com/ankane/xlearn)
