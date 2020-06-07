@@ -60,7 +60,7 @@ RUN gem install \
         numo-narray \
         rice \
         && \
-    gem install --verbose torch-rb -- --with-torch-dir=/opt/libtorch && \
+    gem install --verbose -v 0.2.5 torch-rb -- --with-torch-dir=/opt/libtorch && \
     gem install torchvision && \
     iruby register
 
