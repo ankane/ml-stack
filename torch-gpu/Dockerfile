@@ -48,7 +48,7 @@ RUN pip3 install jupyter && \
 
 # install LibTorch
 RUN cd /opt && \
-    wget -O libtorch.zip -q https://download.pytorch.org/libtorch/cu92/libtorch-cxx11-abi-shared-with-deps-1.5.0%2Bcu92.zip && \
+    wget -O libtorch.zip -q https://download.pytorch.org/libtorch/cu92/libtorch-cxx11-abi-shared-with-deps-1.5.1%2Bcu92.zip && \
     unzip -q libtorch.zip && \
     rm libtorch.zip
 
@@ -60,7 +60,7 @@ RUN gem install \
         numo-narray \
         rice \
         && \
-    gem install --verbose -v 0.2.5 torch-rb -- --with-torch-dir=/opt/libtorch && \
+    gem install --verbose -v 0.2.7 torch-rb -- --with-torch-dir=/opt/libtorch && \
     gem install torchvision && \
     iruby register
 
