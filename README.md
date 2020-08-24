@@ -102,6 +102,7 @@ Designed for deep learning with Torch
 
 - [Torch.rb](https://github.com/ankane/torch.rb)
 - [TorchVision](https://github.com/ankane/torchvision)
+- [TorchText](https://github.com/ankane/torchtext)
 
 ## Contributing
 
