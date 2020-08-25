@@ -64,7 +64,8 @@ RUN gem install \
         rice \
         && \
     gem install --verbose -v 0.3.2 torch-rb -- --with-torch-dir=/opt/libtorch && \
-    gem install torchaudio torchtext torchvision && \
+    gem install torchaudio -- --with-torch-dir=/opt/libtorch && \
+    gem install torchtext torchvision && \
     iruby register
 
 WORKDIR /notebooks
