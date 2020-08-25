@@ -101,8 +101,9 @@ Tag: `torch-gpu`
 Designed for deep learning with Torch
 
 - [Torch.rb](https://github.com/ankane/torch.rb)
-- [TorchVision](https://github.com/ankane/torchvision)
+- [TorchAudio](https://github.com/ankane/torchaudio)
 - [TorchText](https://github.com/ankane/torchtext)
+- [TorchVision](https://github.com/ankane/torchvision)
 
 ## Contributing
 

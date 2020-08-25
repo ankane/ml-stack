@@ -11,6 +11,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         libczmq-dev \
         libffi-dev \
         libreadline-dev \
+        libsox-dev \
+        libsox-fmt-all \
         libssl-dev \
         libtool \
         libyaml-dev \
@@ -19,6 +21,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         python3 \
         python3-pip \
         python3-setuptools \
+        sox \
         unzip \
         wget \
         zlib1g-dev \
@@ -61,7 +64,7 @@ RUN gem install \
         rice \
         && \
     gem install --verbose -v 0.3.2 torch-rb -- --with-torch-dir=/opt/libtorch && \
-    gem install torchvision torchtext && \
+    gem install torchaudio torchtext torchvision && \
     iruby register
 
 WORKDIR /notebooks
