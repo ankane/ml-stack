@@ -91,6 +91,7 @@ Tag: `standard`
 - [Prophet](https://github.com/ankane/prophet)
 - [Rover](https://github.com/ankane/rover)
 - [Rumale](https://github.com/yoshoku/rumale)
+- [Vega](https://github.com/ankane/vega)
 - [XGBoost](https://github.com/ankane/xgboost)
 - [xLearn](https://github.com/ankane/xlearn)
 

@@ -59,6 +59,7 @@ RUN gem install \
         prophet-rb \
         rover-df \
         rumale \
+        vega \
         xgb \
         xlearn \
         && \
