@@ -84,6 +84,7 @@ Tag: `standard`
 
 - [Daru](https://github.com/SciRuby/daru)
 - [fastText](https://github.com/ankane/fastText)
+- [Informers](https://github.com/ankane/informers)
 - [LIBMF](https://github.com/ankane/libmf)
 - [LightGBM](https://github.com/ankane/lightgbm)
 - [Numo](https://github.com/ruby-numo/numo-narray)

@@ -50,6 +50,7 @@ RUN pip3 install jupyter matplotlib && \
 RUN gem install \
         daru \
         ffi-rzmq \
+        informers \
         iruby \
         libmf \
         lightgbm \
