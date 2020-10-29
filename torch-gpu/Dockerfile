@@ -1,6 +1,6 @@
 FROM nvidia/cuda:9.2-cudnn7-devel-ubuntu18.04
 
-ENV RUBY_VERSION 2.7.1
+ENV RUBY_VERSION 2.7.2
 
 # install packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
