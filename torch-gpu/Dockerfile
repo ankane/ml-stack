@@ -63,7 +63,7 @@ RUN gem install \
         numo-narray \
         rice \
         && \
-    gem install --verbose -v 0.5.1 torch-rb -- --with-torch-dir=/opt/libtorch && \
+    gem install --verbose -v 0.5.2 torch-rb -- --with-torch-dir=/opt/libtorch && \
     gem install torchaudio -- --with-torch-dir=/opt/libtorch && \
     gem install torchtext torchvision && \
     iruby register
