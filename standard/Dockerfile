@@ -17,6 +17,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         libzmq3-dev \
         make \
         python3 \
+        python3-dev \
         python3-pip \
         python3-setuptools \
         unzip \
