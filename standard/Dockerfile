@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-ENV RUBY_VERSION 2.7.2
+ENV RUBY_VERSION 3.0.0
 
 # install packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
