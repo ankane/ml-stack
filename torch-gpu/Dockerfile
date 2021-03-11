@@ -15,6 +15,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         libsox-fmt-all \
         libssl-dev \
         libtool \
+        libvips \
         libyaml-dev \
         libzmq3-dev \
         make \
