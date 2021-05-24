@@ -52,7 +52,7 @@ RUN pip3 install jupyter && \
 
 # install LibTorch
 RUN cd /opt && \
-    wget -O libtorch.zip -q https://download.pytorch.org/libtorch/cu92/libtorch-cxx11-abi-shared-with-deps-1.8.1%2Bcu102.zip && \
+    wget -O libtorch.zip -q https://download.pytorch.org/libtorch/cu102/libtorch-cxx11-abi-shared-with-deps-1.8.1%2Bcu102.zip && \
     unzip -q libtorch.zip && \
     rm libtorch.zip
 
