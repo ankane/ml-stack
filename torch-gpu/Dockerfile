@@ -1,6 +1,6 @@
 FROM nvidia/cuda:10.2-cudnn7-devel-ubuntu18.04
 
-ENV RUBY_VERSION 3.0.1
+ENV RUBY_VERSION 3.0.2
 
 # install packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -52,7 +52,7 @@ RUN pip3 install jupyter && \
 
 # install LibTorch
 RUN cd /opt && \
-    wget -O libtorch.zip -q https://download.pytorch.org/libtorch/cu102/libtorch-cxx11-abi-shared-with-deps-1.8.1%2Bcu102.zip && \
+    wget -O libtorch.zip -q https://download.pytorch.org/libtorch/cu102/libtorch-cxx11-abi-shared-with-deps-1.9.0%2Bcu102.zip && \
     unzip -q libtorch.zip && \
     rm libtorch.zip
 
@@ -64,7 +64,7 @@ RUN gem install \
         numo-narray \
         rice \
         && \
-    gem install --verbose -v 0.7.0 torch-rb -- --with-torch-dir=/opt/libtorch && \
+    gem install --verbose -v 0.8.1 torch-rb -- --with-torch-dir=/opt/libtorch && \
     gem install torchaudio -- --with-torch-dir=/opt/libtorch && \
     gem install torchtext torchvision && \
     iruby register
