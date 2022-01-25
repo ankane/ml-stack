@@ -111,15 +111,15 @@ Designed for deep learning with Torch
 
 Everyone is encouraged to help improve this project. Here are a few ways you can help:
 
-- [Report bugs](https://github.com/ankane/ml-stack/issues)
-- Fix bugs and [submit pull requests](https://github.com/ankane/ml-stack/pulls)
+- [Report bugs](https://github.com/ruby-ml/ml-stack/issues)
+- Fix bugs and [submit pull requests](https://github.com/ruby-ml/ml-stack/pulls)
 - Write, clarify, or fix documentation
 - Suggest or add new features
 
 To get started with development:
 
 ```sh
-git clone https://github.com/ankane/ml-stack.git
+git clone https://github.com/ruby-ml/ml-stack.git
 cd ml-stack
 
 # build specific images
