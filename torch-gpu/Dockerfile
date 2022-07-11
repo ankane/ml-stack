@@ -1,4 +1,4 @@
-FROM nvidia/cuda:10.2-cudnn8-devel-ubuntu18.04
+FROM nvidia/cuda:11.3-cudnn8-devel-ubuntu20.04
 
 ENV RUBY_VERSION 3.1.2
 
