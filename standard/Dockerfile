@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-ENV RUBY_VERSION 3.0.2
+ENV RUBY_VERSION 3.1.2
 
 # install packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -28,7 +28,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # install Ruby
 RUN cd /tmp && \
-    wget -O ruby.tar.gz -q https://cache.ruby-lang.org/pub/ruby/3.0/ruby-$RUBY_VERSION.tar.gz && \
+    wget -O ruby.tar.gz -q https://cache.ruby-lang.org/pub/ruby/3.1/ruby-$RUBY_VERSION.tar.gz && \
     mkdir ruby && \
     tar xfz ruby.tar.gz -C ruby --strip-components=1 && \
     rm ruby.tar.gz && \
