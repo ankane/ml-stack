@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 ENV RUBY_VERSION 3.1.2
 
@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         build-essential \
         libczmq-dev \
         libffi-dev \
-        libpython3.8 \
+        libpython3.10 \
         libreadline-dev \
         libssl-dev \
         libtool \
