@@ -83,18 +83,18 @@ There are a few images to choose from:
 Tag: `standard`
 
 - [Daru](https://github.com/SciRuby/daru)
-- [fastText](https://github.com/ankane/fastText)
+- [fastText](https://github.com/ankane/fastText-ruby)
 - [Informers](https://github.com/ankane/informers)
-- [LIBMF](https://github.com/ankane/libmf)
-- [LightGBM](https://github.com/ankane/lightgbm)
+- [LIBMF](https://github.com/ankane/libmf-ruby)
+- [LightGBM](https://github.com/ruby-ml/lightgbm-ruby)
 - [Numo](https://github.com/ruby-numo/numo-narray)
 - [Nyaplot](https://github.com/domitry/nyaplot)
-- [Prophet](https://github.com/ankane/prophet)
+- [Prophet](https://github.com/ankane/prophet-ruby)
 - [Rover](https://github.com/ankane/rover)
 - [Rumale](https://github.com/yoshoku/rumale)
-- [Vega](https://github.com/ankane/vega)
-- [XGBoost](https://github.com/ankane/xgboost)
-- [xLearn](https://github.com/ankane/xlearn)
+- [Vega](https://github.com/ankane/vega-ruby)
+- [XGBoost](https://github.com/ruby-ml/xgboost-ruby)
+- [xLearn](https://github.com/ankane/xlearn-ruby)
 
 ### Torch GPU
 
