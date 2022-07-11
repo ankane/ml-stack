@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         build-essential \
         libczmq-dev \
         libffi-dev \
-        libpython3.9 \
+        libpython3.8 \
         libreadline-dev \
         libssl-dev \
         libtool \
