@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.3-cudnn8-devel-ubuntu20.04
+FROM nvidia/cuda:11.3.0-cudnn8-devel-ubuntu20.04
 
 ENV RUBY_VERSION 3.1.2
 
@@ -52,7 +52,7 @@ RUN pip3 install jupyter && \
 
 # install LibTorch
 RUN cd /opt && \
-    wget -O libtorch.zip -q https://download.pytorch.org/libtorch/cu102/libtorch-cxx11-abi-shared-with-deps-1.12.0%2Bcu102.zip && \
+    wget -O libtorch.zip -q https://download.pytorch.org/libtorch/cu102/libtorch-cxx11-abi-shared-with-deps-1.12.0%2Bcu113.zip && \
     unzip -q libtorch.zip && \
     rm libtorch.zip
 
