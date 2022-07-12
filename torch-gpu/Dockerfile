@@ -1,9 +1,10 @@
-FROM nvidia/cuda:11.3.0-cudnn8-devel-ubuntu20.04
+FROM nvidia/cuda:11.3.1-cudnn8-devel-ubuntu20.04
 
 ENV RUBY_VERSION 3.1.2
 
 # install packages
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update &&
+    DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get install -y --no-install-recommends \
         autoconf \
         automake \
         build-essential \
