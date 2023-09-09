@@ -86,14 +86,14 @@ Tag: `standard`
 - [fastText](https://github.com/ankane/fastText-ruby)
 - [Informers](https://github.com/ankane/informers)
 - [LIBMF](https://github.com/ankane/libmf-ruby)
-- [LightGBM](https://github.com/ruby-ml/lightgbm-ruby)
+- [LightGBM](https://github.com/ankane/lightgbm-ruby)
 - [Numo](https://github.com/ruby-numo/numo-narray)
 - [Nyaplot](https://github.com/domitry/nyaplot)
 - [Prophet](https://github.com/ankane/prophet-ruby)
 - [Rover](https://github.com/ankane/rover)
 - [Rumale](https://github.com/yoshoku/rumale)
 - [Vega](https://github.com/ankane/vega-ruby)
-- [XGBoost](https://github.com/ruby-ml/xgboost-ruby)
+- [XGBoost](https://github.com/ankane/xgboost-ruby)
 - [xLearn](https://github.com/ankane/xlearn-ruby)
 
 ### Torch GPU
@@ -112,15 +112,15 @@ Designed for deep learning with Torch
 
 Everyone is encouraged to help improve this project. Here are a few ways you can help:
 
-- [Report bugs](https://github.com/ruby-ml/ml-stack/issues)
-- Fix bugs and [submit pull requests](https://github.com/ruby-ml/ml-stack/pulls)
+- [Report bugs](https://github.com/ankane/ml-stack/issues)
+- Fix bugs and [submit pull requests](https://github.com/ankane/ml-stack/pulls)
 - Write, clarify, or fix documentation
 - Suggest or add new features
 
 To get started with development:
 
 ```sh
-git clone https://github.com/ruby-ml/ml-stack.git
+git clone https://github.com/ankane/ml-stack.git
 cd ml-stack
 
 # build specific images
