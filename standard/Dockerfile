@@ -1,6 +1,6 @@
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
-ENV RUBY_VERSION 3.1.2
+ENV RUBY_VERSION=3.3.5
 
 # install packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -28,7 +28,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # install Ruby
 RUN cd /tmp && \
-    wget -O ruby.tar.gz -q https://cache.ruby-lang.org/pub/ruby/3.1/ruby-$RUBY_VERSION.tar.gz && \
+    wget -O ruby.tar.gz -q https://cache.ruby-lang.org/pub/ruby/3.3/ruby-$RUBY_VERSION.tar.gz && \
     mkdir ruby && \
     tar xfz ruby.tar.gz -C ruby --strip-components=1 && \
     rm ruby.tar.gz && \
@@ -42,7 +42,7 @@ RUN cd /tmp && \
     bundle --version
 
 # install Jupyter
-RUN pip3 install jupyter matplotlib && \
+RUN pip3 install jupyter matplotlib --break-system-packages && \
     jupyter kernelspec remove -f python3 && \
     mkdir /root/.jupyter && \
     echo 'c.KernelSpecManager.ensure_native_kernel = False' > ~/.jupyter/jupyter_notebook_config.py
@@ -58,6 +58,7 @@ RUN gem install \
         matplotlib \
         numo-narray \
         nyaplot \
+        polars-df \
         prophet-rb \
         rover-df \
         rumale \
@@ -65,7 +66,7 @@ RUN gem install \
         xgb \
         xlearn \
         && \
-    gem install fasttext -- --with-optflags="-march=x86-64" && \
+    gem install fasttext -- --with-optflags="" && \
     iruby register
 
 WORKDIR /notebooks

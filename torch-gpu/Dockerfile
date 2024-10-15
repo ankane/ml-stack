@@ -1,6 +1,6 @@
-FROM nvidia/cuda:11.3.1-cudnn8-devel-ubuntu20.04
+FROM nvidia/cuda:12.4.1-cudnn-devel-ubuntu22.04
 
-ENV RUBY_VERSION 3.1.2
+ENV RUBY_VERSION=3.3.5
 
 # install packages
 RUN apt-get update && \
@@ -32,7 +32,7 @@ RUN apt-get update && \
 
 # install Ruby
 RUN cd /tmp && \
-    wget -O ruby.tar.gz -q https://cache.ruby-lang.org/pub/ruby/3.1/ruby-$RUBY_VERSION.tar.gz && \
+    wget -O ruby.tar.gz -q https://cache.ruby-lang.org/pub/ruby/3.3/ruby-$RUBY_VERSION.tar.gz && \
     mkdir ruby && \
     tar xfz ruby.tar.gz -C ruby --strip-components=1 && \
     rm ruby.tar.gz && \
@@ -53,7 +53,7 @@ RUN pip3 install jupyter && \
 
 # install LibTorch
 RUN cd /opt && \
-    wget -O libtorch.zip -q https://download.pytorch.org/libtorch/cu113/libtorch-cxx11-abi-shared-with-deps-1.12.0%2Bcu113.zip && \
+    wget -O libtorch.zip -q https://download.pytorch.org/libtorch/cu124/libtorch-shared-with-deps-2.4.1%2Bcu124.zip && \
     unzip -q libtorch.zip && \
     rm libtorch.zip
 
@@ -65,7 +65,7 @@ RUN gem install \
         numo-narray \
         rice \
         && \
-    gem install --verbose -v 0.11.1 torch-rb -- --with-torch-dir=/opt/libtorch && \
+    gem install --verbose -v 0.17.1 torch-rb -- --with-torch-dir=/opt/libtorch && \
     gem install torchaudio -- --with-torch-dir=/opt/libtorch && \
     gem install torchrec torchtext torchvision && \
     iruby register

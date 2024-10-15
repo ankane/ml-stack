@@ -89,6 +89,7 @@ Tag: `standard`
 - [LightGBM](https://github.com/ankane/lightgbm-ruby)
 - [Numo](https://github.com/ruby-numo/numo-narray)
 - [Nyaplot](https://github.com/domitry/nyaplot)
+- [Polars](https://github.com/ankane/ruby-polars)
 - [Prophet](https://github.com/ankane/prophet-ruby)
 - [Rover](https://github.com/ankane/rover)
 - [Rumale](https://github.com/yoshoku/rumale)
