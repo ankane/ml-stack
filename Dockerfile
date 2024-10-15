@@ -10,7 +10,9 @@ COPY standard/Forecasting.ipynb ./
 # The rest is specific to Binder
 ARG NB_USER
 ARG NB_UID
-RUN adduser --disabled-password --gecos '' --uid ${NB_UID} ${NB_USER} && \
+RUN apt-get update && \
+    apt-get install adduser && \
+    adduser --disabled-password --gecos '' --uid ${NB_UID} ${NB_USER} && \
     chown -R ${NB_USER}:${NB_USER} .
 USER ${NB_USER}
 RUN mkdir ~/.jupyter && \
