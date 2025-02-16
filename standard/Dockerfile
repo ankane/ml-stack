@@ -28,7 +28,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # install Ruby
 RUN cd /tmp && \
-    wget -O ruby.tar.gz -q https://cache.ruby-lang.org/pub/ruby/3.3/ruby-$RUBY_VERSION.tar.gz && \
+    wget -O ruby.tar.gz -q https://cache.ruby-lang.org/pub/ruby/3.4/ruby-$RUBY_VERSION.tar.gz && \
     mkdir ruby && \
     tar xfz ruby.tar.gz -C ruby --strip-components=1 && \
     rm ruby.tar.gz && \
