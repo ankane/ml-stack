@@ -10,6 +10,8 @@ COPY standard/Forecasting.ipynb ./
 # The rest is specific to Binder
 ARG NB_USER
 ARG NB_UID
+# Free uid 1000 if needed
+RUN userdel ubuntu
 RUN apt-get update && \
     apt-get install adduser && \
     adduser --disabled-password --gecos '' --uid ${NB_UID} ${NB_USER} && \
