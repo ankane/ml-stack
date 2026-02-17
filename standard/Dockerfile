@@ -1,6 +1,6 @@
 FROM ubuntu:24.04
 
-ENV RUBY_VERSION=3.4.2
+ENV RUBY_VERSION=4.0.1
 
 # install packages
 RUN apt-get update && apt-get install -y --no-install-recommends \

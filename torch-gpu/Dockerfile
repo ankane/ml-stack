@@ -1,6 +1,6 @@
-FROM nvidia/cuda:12.4.1-cudnn-devel-ubuntu22.04
+FROM nvidia/cuda:13.0.2-cudnn-devel-ubuntu24.04
 
-ENV RUBY_VERSION=3.4.2
+ENV RUBY_VERSION=4.0.1
 
 # install packages
 RUN apt-get update && \
@@ -53,7 +53,7 @@ RUN pip3 install jupyter && \
 
 # install LibTorch
 RUN cd /opt && \
-    wget -O libtorch.zip -q https://download.pytorch.org/libtorch/cu124/libtorch-shared-with-deps-2.6.0%2Bcu124.zip && \
+    wget -O libtorch.zip -q https://download.pytorch.org/libtorch/cu130/libtorch-shared-with-deps-2.10.0%2Bcu130.zip && \
     unzip -q libtorch.zip && \
     rm libtorch.zip
 
@@ -65,7 +65,7 @@ RUN gem install \
         numo-narray \
         rice \
         && \
-    gem install --verbose -v 0.19.1 torch-rb -- --with-torch-dir=/opt/libtorch && \
+    gem install --verbose -v 0.23.0 torch-rb -- --with-torch-dir=/opt/libtorch && \
     gem install torchaudio -- --with-torch-dir=/opt/libtorch && \
     gem install torchrec torchtext torchvision && \
     iruby register
