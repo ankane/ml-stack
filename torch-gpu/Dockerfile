@@ -46,7 +46,7 @@ RUN cd /tmp && \
     bundle --version
 
 # install Jupyter
-RUN pip3 install jupyter && \
+RUN pip3 install jupyter --break-system-packages && \
     jupyter kernelspec remove -f python3 && \
     mkdir /root/.jupyter && \
     echo 'c.KernelSpecManager.ensure_native_kernel = False' > ~/.jupyter/jupyter_notebook_config.py
