@@ -1,4 +1,4 @@
-FROM nvidia/cuda:13.0.2-cudnn-devel-ubuntu24.04
+FROM nvidia/cuda:12.8.1-cudnn-devel-ubuntu24.04
 
 ENV RUBY_VERSION=4.0.1
 
@@ -53,7 +53,7 @@ RUN pip3 install jupyter --break-system-packages && \
 
 # install LibTorch
 RUN cd /opt && \
-    wget -O libtorch.zip -q https://download.pytorch.org/libtorch/cu130/libtorch-shared-with-deps-2.10.0%2Bcu130.zip && \
+    wget -O libtorch.zip -q https://download.pytorch.org/libtorch/cu128/libtorch-shared-with-deps-2.10.0%2Bcu128.zip && \
     unzip -q libtorch.zip && \
     rm libtorch.zip
 
